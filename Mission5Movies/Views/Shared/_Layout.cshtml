@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="~/img/Movie_Clapper_Icon.png" type="image/png" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/myStyles.css" />
+</head>
+<body style="width:100%">
+    <header class="text-center myHeader" style="font-weight:bold; width: 100%">
+        <h1 class="display-4">@ViewData["Header"]</h1>
+        <nav>
+            <!--Nav bar to all pages-->
+            <a asp-controller="Home" asp-action="Index">Home</a> |
+            <a asp-controller="Home" asp-action="Podcasts">Podcasts</a> |
+            <a asp-controller="Home" asp-action="MovieForm">Add Movie</a> |
+            <a asp-controller="Home" asp-action="MovieList">All Movies</a>
+        </nav>
+    </header>
+    @RenderBody()
+</body>
+</html>
