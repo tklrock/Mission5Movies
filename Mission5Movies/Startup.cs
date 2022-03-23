@@ -49,6 +49,12 @@ namespace Mission5Movies
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.Use(async (context, next) =>
+            {
+                context.Response.Headers.Add("X-Xss-Protection", "1");
+                await next();
+            });
+
             app.UseRouting();
 
             app.UseAuthorization();
